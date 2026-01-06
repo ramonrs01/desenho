@@ -236,29 +236,64 @@
   /* =========================
      MOBILE
   ========================= */
-  @media(max-width:900px){
-    nav ul{
-      position:absolute;
-      top:60px;
-      right:0;
-      background:#000;
-      flex-direction:column;
-      width:200px;
-      padding:20px;
-      display:none;
+/* MOBILE - MAIS ZOOM E LEGIBILIDADE */
+@media (max-width: 900px) {
+
+    body {
+      font-size: 18px; /* base maior */
     }
   
-    nav ul.active{
-      display:flex;
+    nav {
+      padding: 18px 6%;
     }
   
-    .menu-toggle{
-      display:flex;
+    nav h2 {
+      font-size: 1.6rem;
     }
   
-    header h1{
-      font-size:2.2rem;
+    nav ul a {
+      font-size: 1.25rem;
+    }
+  
+    header h1 {
+      font-size: 2.8rem;
+    }
+  
+    header p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+  
+    .btn {
+      padding: 16px 36px;
+      font-size: 1.25rem;
+    }
+  
+    section {
+      padding: 90px 6%;
+    }
+  
+    section h2 {
+      font-size: 2.3rem;
+    }
+  
+    .box {
+      padding: 30px;
+      font-size: 1.05rem;
+    }
+  
+    .box p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+  
+    .gallery {
+      grid-template-columns: 1fr; /* imagens maiores */
+    }
+  
+    .gallery img {
+      transform: scale(1.02);
     }
   }
-
+  
   
