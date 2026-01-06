@@ -1,0 +1,263 @@
+/* =========================
+   RESET / BASE
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html{
+    scroll-behavior:smooth;
+  }
+  
+  body{
+    background:#0f0f0f;
+    color:#fff;
+  }
+  
+  /* =========================
+     NAVBAR
+  ========================= */
+  nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(6px);
+    z-index:1000;
+    transition:transform 0.4s ease;
+  }
+  
+  nav h2{
+    font-size:1.2rem;
+  }
+  
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+  }
+  
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:0.95rem;
+    transition:0.3s;
+  }
+  
+  nav a:hover{
+    opacity:0.6;
+  }
+  
+  /* =========================
+     MENU HAMBURGUER
+  ========================= */
+  .menu-toggle{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+  }
+  
+  .menu-toggle span{
+    width:25px;
+    height:3px;
+    background:#fff;
+    margin:4px 0;
+  }
+  
+  /* =========================
+     HEADER (PARALLAX)
+  ========================= */
+  header{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  
+  header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.6), #0f0f0f);
+  }
+  
+  .header-content{
+    position:relative;
+    max-width:700px;
+    padding:20px;
+  }
+  
+  header h1{
+    font-size:3rem;
+  }
+  
+  header p{
+    color:#ccc;
+    margin:15px 0 30px;
+  }
+  
+  .btn{
+    padding:12px 28px;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    position:relative;
+    overflow:hidden;
+  }
+  
+  /* =========================
+     SECTIONS
+  ========================= */
+  section{
+    padding:100px 10%;
+  }
+  
+  section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+  }
+  
+  .section-box{
+    max-width:900px;
+    margin:auto;
+    display:grid;
+    gap:30px;
+  }
+  
+  /* =========================
+     BOX / CARDS
+  ========================= */
+  .box{
+    background:#151515;
+    padding:25px;
+    border-radius:10px;
+  }
+  
+  .box p{
+    color:#ccc;
+    line-height:1.6;
+  }
+  
+  /* =========================
+     PORTFOLIO
+  ========================= */
+  .portfolio{
+    background:#111;
+  }
+  
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+  }
+  
+  .gallery img{
+    width:100%;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  
+  .gallery img:hover{
+    transform:scale(1.05);
+  }
+  
+  /* =========================
+     MODAL
+  ========================= */
+  .modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+  }
+  
+  .modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  footer{
+    background:#000;
+    text-align:center;
+    padding:25px;
+    color:#777;
+  }
+  
+  /* =========================
+     ANIMAÇÕES (OBRIGATÓRIO)
+  ========================= */
+  .show{
+    opacity:1 !important;
+    transform:translateY(0) scale(1) !important;
+    transition:0.8s ease;
+  }
+  
+  .box,
+  .gallery img,
+  section h2,
+  section p{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  
+  /* Ripple effect */
+  @keyframes ripple{
+    from{
+      transform:scale(0);
+      opacity:0.6;
+    }
+    to{
+      transform:scale(2);
+      opacity:0;
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  @media(max-width:768px){
+    nav ul{
+      position:absolute;
+      top:60px;
+      right:0;
+      background:#000;
+      flex-direction:column;
+      width:200px;
+      padding:20px;
+      display:none;
+    }
+  
+    nav ul.active{
+      display:flex;
+    }
+  
+    .menu-toggle{
+      display:flex;
+    }
+  
+    header h1{
+      font-size:2.2rem;
+    }
+  }
+  
