@@ -236,7 +236,7 @@
   /* =========================
      MOBILE
   ========================= */
-  @media(max-width:768px){
+  @media(max-width:900px){
     nav ul{
       position:absolute;
       top:60px;
@@ -260,4 +260,5 @@
       font-size:2.2rem;
     }
   }
+
   
