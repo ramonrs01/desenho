@@ -1,6 +1,4 @@
-/* =========================
-   SCROLL PROGRESS BAR
-========================= */
+/* SCROLL PROGRESS BAR */
 const progressBar = document.createElement("div");
 progressBar.style.position = "fixed";
 progressBar.style.top = 0;
@@ -18,9 +16,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =========================
-   PARALLAX HEADER
-========================= */
+/* PARALLAX HEADER */
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
@@ -28,9 +24,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =========================
-   INTERSECTION OBSERVER
-========================= */
+/* INTERSECTION OBSERVER */
 const revealElements = document.querySelectorAll(
   ".box, .gallery img, section h2, section p"
 );
@@ -47,9 +41,7 @@ const revealObserver = new IntersectionObserver(entries => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 
-/* =========================
-   NAVBAR ESCONDE/MOSTRA
-========================= */
+/* NAVBAR ESCONDE/MOSTRA */
 let lastScroll = 0;
 const nav = document.querySelector("nav");
 
@@ -63,9 +55,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* =========================
-   TÍTULO COM LINHA DESENHADA
-========================= */
+/* TÍTULO COM LINHA DESENHADA */
 document.querySelectorAll("section h2").forEach(title => {
   const line = document.createElement("span");
   line.style.display = "block";
@@ -88,9 +78,7 @@ document.querySelectorAll("section h2").forEach(title => {
 });
 
 
-/* =========================
-   BOTÃO RIPPLE
-========================= */
+/* BOTÃO RIPPLE */
 document.querySelectorAll(".btn").forEach(btn => {
   btn.style.position = "relative";
   btn.style.overflow = "hidden";
@@ -112,9 +100,7 @@ document.querySelectorAll(".btn").forEach(btn => {
 });
 
 
-/* =========================
-   CTA PULSANDO
-========================= */
+/* CTA PULSANDO*/
 setInterval(() => {
   document.querySelectorAll(".btn").forEach(btn => {
     btn.animate(
@@ -125,9 +111,7 @@ setInterval(() => {
 }, 5000);
 
 
-/* =========================
-   ZOOM AO ENTRAR NA SEÇÃO
-========================= */
+/* ZOOM AO ENTRAR NA SEÇÃO */
 document.querySelectorAll("section").forEach(section => {
   section.style.opacity = 0;
   section.style.transform = "scale(0.95)";
@@ -144,3 +128,4 @@ document.querySelectorAll("section").forEach(section => {
 
   observer.observe(section);
 });
+
