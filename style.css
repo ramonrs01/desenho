@@ -239,22 +239,53 @@
 /* MOBILE - MAIS ZOOM E LEGIBILIDADE */
 @media (max-width: 900px) {
 
+    /* BASE */
     body {
-      font-size: 18px; /* base maior */
+      font-size: 18px;
     }
   
+    /* NAVBAR */
     nav {
       padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   
     nav h2 {
       font-size: 1.6rem;
     }
   
+    nav ul {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #000;
+      flex-direction: column;
+      width: 220px;
+      padding: 25px;
+      gap: 20px;
+      display: none;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
     nav ul a {
       font-size: 1.25rem;
     }
   
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .title {
+      display: block;
+      font-size: 1.4rem;
+    }
+  
+    /* HEADER */
     header h1 {
       font-size: 2.8rem;
     }
@@ -269,6 +300,7 @@
       font-size: 1.25rem;
     }
   
+    /* SECTIONS */
     section {
       padding: 90px 6%;
     }
@@ -277,6 +309,7 @@
       font-size: 2.3rem;
     }
   
+    /* BOX */
     .box {
       padding: 30px;
       font-size: 1.05rem;
@@ -287,13 +320,15 @@
       line-height: 1.8;
     }
   
+    /* GALLERY */
     .gallery {
-      grid-template-columns: 1fr; /* imagens maiores */
+      grid-template-columns: 1fr;
     }
   
     .gallery img {
       transform: scale(1.02);
     }
   }
+  
   
   
