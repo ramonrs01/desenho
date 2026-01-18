@@ -1,6 +1,4 @@
-/* =========================
-   MENU HAMBURGUER MOBILE
-========================= */
+/* MENU HAMBURGUER MOBILE */
 const menuToggle = document.getElementById("menu");
 const navLinks = document.getElementById("navLinks");
 
@@ -16,9 +14,7 @@ document.querySelectorAll("#navLinks a").forEach(link => {
 });
 
 
-/* =========================
-   MODAL PORTFOLIO
-========================= */
+/* MODAL PORTFOLIO */
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 
@@ -34,9 +30,7 @@ modal.addEventListener("click", () => {
 });
 
 
-/* =========================
-   ANIMAÇÕES AO SCROLL
-========================= */
+/* ANIMAÇÕES AO SCROLL */
 const animatedElements = document.querySelectorAll(
   ".box, .gallery img, section h2, section p"
 );
@@ -52,3 +46,4 @@ const animateOnScroll = () => {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
+
